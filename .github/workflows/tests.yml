@@ -8,17 +8,7 @@ env:
     EXECUTABLE_FILES: 1 # Run check for executable files? 1 or 0
     PHPBB_BRANCH: 3.3.x # The phpBB branch to run tests on
 
-on:
-    push:
-        branches:        # Run tests when commits are pushed to these branches in your repo
-            - main
-            - master
-            - develop
-    pull_request:        # Run tests when pull requests are made on these branches in your repo
-        branches:
-            - main
-            - master
-            - develop
+on: [push, pull_request]
 
 jobs:
     # START Basic Checks Job (EPV, code sniffer, images check, etc.)
